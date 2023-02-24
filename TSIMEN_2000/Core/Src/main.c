@@ -75,10 +75,10 @@ double Wavelength = 0;
 //----- Miscellaneous variable definitions END
 
 //----- Steering engine angle parameter & Version BEGIN
-int PWM_DARK = 1040, 
+int PWM_DARK = 980, 
     PWM_REFERENCE = 1280, 
-    PWM_SAMPLE = 830;
-uint8_t static USART1_Tsimen_Version[]       = "TS-2000-0000018/V1.1.1";    
+    PWM_SAMPLE = 800;
+uint8_t static USART1_Tsimen_Version[]       = "TS-2000-000001/V1.1.2";    
 //----- Steering engine angle parameter & Version END
 
 
