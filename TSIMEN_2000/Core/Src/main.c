@@ -75,10 +75,10 @@ double Wavelength = 0;
 //----- Miscellaneous variable definitions END
 
 //----- Steering engine angle parameter & Version BEGIN
-int PWM_DARK = 980, 
-    PWM_REFERENCE = 1280, 
-    PWM_SAMPLE = 800;
-uint8_t static USART1_Tsimen_Version[]       = "TS-2000-000001/V1.1.2";    
+int PWM_DARK = 920, 
+    PWM_REFERENCE = 1150, 
+    PWM_SAMPLE = 730;
+uint8_t static USART1_Tsimen_Version[]       = "TS-2000-000005/V1.1.2";    
 //----- Steering engine angle parameter & Version END
 
 
@@ -511,8 +511,9 @@ int main(void)
       if (DATA_CACHE1[7]==(uint8_t)CRC16&0xFF && DATA_CACHE1[6]==(uint8_t)(CRC16>>8)&0xFF)
       {
         CRC16 = 0;
-
-  
+        HAL_UART_Transmit(&huart1,USART1_Tsimen_AA,sizeof(USART1_Tsimen_AA),0xFFFF);
+        Send_Float(Energy_Coefficient,2048);
+        HAL_UART_Transmit(&huart1,USART1_Tsimen_DD,sizeof(USART1_Tsimen_DD),0xFFFF);
         memset(DATA_CACHE1,0,sizeof(DATA_CACHE1));
       }
 
@@ -650,6 +651,7 @@ int main(void)
         GetSpecData(USART2_Spec_XenonOnOne,PWM_REFERENCE);
         HAL_Delay(50);
         GetSpecData(USART2_Spec_XenonOnOne,PWM_SAMPLE);
+        // PWM_PulseWidth(PWM_DARK);
         // __HAL_UART_ENABLE_IT(&huart1,UART_IT_IDLE);
         // HAL_UART_Receive_DMA(&huart1,USART_RX1_BUFFER,RX1BUFFERSIZE);
       }
@@ -701,6 +703,7 @@ int main(void)
         HAL_UART_Transmit(&huart1,USART1_Tsimen_AA,sizeof(USART1_Tsimen_AA),0xFFFF);
         UnderCoefficient(USART2_Spec_XenonOff,USART2_Spec_XenonOnOne,USART2_Spec_XenonOnOne,PWM_DARK,PWM_REFERENCE,PWM_SAMPLE);
         HAL_UART_Transmit(&huart1,USART1_Tsimen_DD,sizeof(USART1_Tsimen_DD),0xFFFF);
+        // PWM_PulseWidth(PWM_DARK);
         memset(DATA_CACHE1,0,sizeof(DATA_CACHE1));
       }
 

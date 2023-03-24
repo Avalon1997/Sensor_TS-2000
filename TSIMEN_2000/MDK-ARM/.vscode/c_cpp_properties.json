@@ -3,16 +3,16 @@
         {
             "name": "TSIMEN_2000",
             "includePath": [
-                "e:\\TS-2000_Code\\Sensor\\TSIMEN_2000\\Core\\Inc",
-                "e:\\TS-2000_Code\\Sensor\\TSIMEN_2000\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
-                "e:\\TS-2000_Code\\Sensor\\TSIMEN_2000\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
-                "e:\\TS-2000_Code\\Sensor\\TSIMEN_2000\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
-                "e:\\TS-2000_Code\\Sensor\\TSIMEN_2000\\Drivers\\CMSIS\\Include",
-                "C:\\Program Files\\Keil_v5\\ARM\\ARMCC\\include",
-                "C:\\Program Files\\Keil_v5\\ARM\\ARMCC\\include\\rw",
-                "e:\\TS-2000_Code\\Sensor\\TSIMEN_2000\\MDK-ARM",
-                "e:\\TS-2000_Code\\Sensor\\TSIMEN_2000\\Core\\Src",
-                "e:\\TS-2000_Code\\Sensor\\TSIMEN_2000\\Drivers\\STM32F1xx_HAL_Driver\\Src"
+                "e:\\Repository\\TS-2000_Code\\Sensor_TS-2000\\TSIMEN_2000\\Core\\Inc",
+                "e:\\Repository\\TS-2000_Code\\Sensor_TS-2000\\TSIMEN_2000\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
+                "e:\\Repository\\TS-2000_Code\\Sensor_TS-2000\\TSIMEN_2000\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
+                "e:\\Repository\\TS-2000_Code\\Sensor_TS-2000\\TSIMEN_2000\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
+                "e:\\Repository\\TS-2000_Code\\Sensor_TS-2000\\TSIMEN_2000\\Drivers\\CMSIS\\Include",
+                "D:\\Program Files\\Keil_v5\\ARM\\ARMCC\\include",
+                "D:\\Program Files\\Keil_v5\\ARM\\ARMCC\\include\\rw",
+                "e:\\Repository\\TS-2000_Code\\Sensor_TS-2000\\TSIMEN_2000\\MDK-ARM",
+                "e:\\Repository\\TS-2000_Code\\Sensor_TS-2000\\TSIMEN_2000\\Core\\Src",
+                "e:\\Repository\\TS-2000_Code\\Sensor_TS-2000\\TSIMEN_2000\\Drivers\\STM32F1xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",
