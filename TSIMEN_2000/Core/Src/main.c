@@ -70,15 +70,16 @@ float DarkData[1024] = {0},
       RefData[1024] = {0}, 
       SamData[1024] = {0}, 
       ABS[1024] = {0},
-      Optical_path = 5.0;
+      Optical_path = 0.0052;
 double Wavelength = 0;
 //----- Miscellaneous variable definitions END
 
 //----- Steering engine angle parameter & Version BEGIN
-int PWM_DARK = 920, 
-    PWM_REFERENCE = 1150, 
-    PWM_SAMPLE = 730;
-uint8_t static USART1_Tsimen_Version[]       = "TS-2000-000005/V1.1.2";    
+
+int PWM_DARK = 1050,  
+    PWM_REFERENCE = 1380, 
+    PWM_SAMPLE = 930;
+uint8_t static USART1_Tsimen_Version[]       = "TS-2000-000037/V1.1.2";    
 //----- Steering engine angle parameter & Version END
 
 
@@ -87,7 +88,7 @@ uint8_t static USART1_Tsimen_Version[]       = "TS-2000-000005/V1.1.2";
 // ----- status check array BEGIN
 uint8_t static USART1_Tsimen_Reset[]             = {0x01,0x01,0x00,0x00,0x00,0x00,0x0A,0x3C};      // 1 Global reset
 uint8_t static USART1_Tsimen_Ver[]               = {0x01,0x02,0x00,0x00,0x00,0x00,0x0A,0x78};      // 2 Read the sensor version
-uint8_t static USART1_Tsimen_CheckInt[]          = {0x01,0x04,0x00,0x00,0x00,0x00,0x0A,0xF0};      // 4 Check the current integration time of the spectrometer
+uint8_t static USART1_Tsimen_CheckInt[]          = {0x01,0x04,0x00,0x00,0x00,0x00,0x0A,0xF0};      // 4 Check  the current integration time of the spectrometer
 uint8_t static USART1_Tsimen_CheckAve[]          = {0x01,0x06,0x00,0x00,0x00,0x00,0xCA,0x89};      // 6 Check the current average times of the spectrometer
 uint8_t static USART1_Tsimen_CheckWLC[]          = {0x01,0x0E,0x00,0x00,0x00,0x00,0x0B,0x2C};      // 14 Read the wavelength coefficient
 uint8_t static USART1_Tsimen_CheckENC[]          = {0x01,0x10,0x00,0x00,0x00,0x00,0x09,0xC0};      // 16 Read the energy cofficient
